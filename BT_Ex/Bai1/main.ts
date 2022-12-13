@@ -37,6 +37,3 @@ while (isLoop) {
             break;
     }
 }
-let aaa = () => {
-
-}
