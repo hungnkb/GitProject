@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <table border="1" style="border-collapse: collapse;" id="table">
+    
+    </table>
+  </body>
+  <script>
+        let itemList = [
+            "Sony Xperia",
+            "Samsung Galaxy",
+            "Nokia 6",
+            "Xiaomi Redmi Note 4",
+            "Apple iPhhone 6S",
+            "Xiaomi Mi 5s Plus",
+            "Apple iPhone 8 Plus",
+            "Fujitsu F-04E",
+            "Oppo A71",
+        ]
+        let a = document.getElementById("table").innerHTML;
+        function itemDisplay() {
+
+        }
+
+        function itemAdd() {
+          let add = prompt("Nhập tên sản phẩm: ");
+          itemList.push(add);
+          return itemList;
+        }
+        function itemRename() {
+
+        }
+        function itemDelete() {
+
+        }
+
+        for(i=0; i<itemList.length; i++) {
+            document.getElementById("table").innerHTML += "<tr>" 
+                + "<td>" + itemList[i] + "</td>" 
+                + "<td>" + "<button id='editBtn" + i +"'>Edit</button>" + "</td>" 
+                + "<td>" + "<button id='deleteBtn" + i + "'>Delete</button>" + "</td>" + "</tr>"
+        }
+  </script>
+</html>

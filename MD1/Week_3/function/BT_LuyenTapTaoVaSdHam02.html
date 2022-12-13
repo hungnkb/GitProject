@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <button onclick="bai3()">Run</button>
+    <p id="kq"></p>
+  </body>
+  <script>
+    // Bài 1
+    function bai1() {
+      let result = 0;
+      let a = +prompt("Nhập số: ");
+      return (result = a * a);
+    }
+
+    // Bài 2
+    function bai2_dienTich() {
+      let result = 0;
+      let a = +prompt("Nhập bán kính hình tròn");
+      return (result = 3.14 * a * a);
+    }
+    function bai2_chuVi() {
+      let result = 0;
+      let a = +prompt("Nhập bán kính hình tròn");
+      return (result = 2 * 3.14 * a);
+    }
+
+    // Bài 3
+    function bai3() {
+      let result = 1;
+      let a = +prompt("Nhập số: ");
+      for (i = 0; i < a; i++) {
+        result *= (a-i) ;
+      }
+      console.log(result)
+    }
+
+    // Bài 4
+    function bai4() {
+      let a = prompt("Nhập dữ liệu: ");
+      if (isNaN(a)) {
+        return (result = "Không phải số");
+      } else {
+        return (result = "Là số");
+      }
+    }
+
+    // Bài 5
+    function bai5() {
+      let a = +prompt("Nhập số thứ nhất: ");
+      let b = +prompt("Nhập số thứ hai: ");
+      let c = +prompt("Nhập số thứ ba: ");
+      for (i = 0; i < 3; i++) {
+        if (a > b && a > c) {
+          return (result = "a là số lớn nhất");
+        } else if (b > a && b > c) {
+          return (result = "b là số lớn nhất");
+        } else if (c > a && c > b) {
+          return (result = "c là số lớn nhất");
+        }
+      }
+    }
+
+    // Bài 6
+    function bai6() {
+      let a = +prompt("Nhập số: ");
+      if (a >= 0) {
+        return (result = "true");
+      } else {
+        return (result = "false");
+      }
+    }
+
+    // Bài 7
+    function bai_7() {
+      let arr = [];
+      for (i = 0; i < 2; i++) {
+        let a = prompt("Nhập số ");
+        arr.push(a);
+      }
+      console.log(arr);
+      let x = arr[0];
+      arr[0] = arr[1];
+      arr[1] = x;
+      console.log(arr);
+      document.getElementById("kq").innerHTML = arr;
+    }
+
+    // Bài 8
+    function bai8() {
+      let a = prompt("Nhập mảng số nguyên ");
+      let arr = a.split(",");
+      console.log(arr);
+      arr.reverse();
+      document.getElementById("kq").innerHTML = arr;
+      console.log(arr);
+      }
+      
+    
+
+    // Bài 9
+    function bai9() {
+    let a = prompt("Nhập mảng ký tự: ");
+    let b = prompt("Nhập ký tự: ");
+    let arr = a.split("");
+    let counts = 0;
+    console.log(arr);
+    for(i=0; i< arr.length; i++) {
+        if(arr[i] == b) {
+            counts++;
+        }
+    }
+    if(counts == 0) {
+        counts = -1;
+    }
+    console.log(counts);
+    document.getElementById("kq").innerHTML = counts;
+    }
+  </script>
+</html>

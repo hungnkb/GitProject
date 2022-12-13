@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table style="text-align: center">
+  <tr>
+    <th>Amount</th>
+    <th>From Currency</th>
+    <th>To Currency</th>
+  </tr>
+  <tr>
+    <td><input id="inputAmount" type="text"></td>
+    <td><select id="inputFrom">
+      <option value="VND" name="VND">VND</option>
+      <option value="USD" name="USD">USD</option>
+      <option value="YEN" name="YEN">YEN</option>
+    </select></td>
+    <td><select id="inputTo">
+      <option value="USD" name="USD">USD</option>
+      <option value="YEN" name="YEN">YEN</option>
+      <option value="VND" name="VND">VND</option>
+    </select></td>
+    <td><button onclick="moneyConvert()">Convert</button>
+<!--      <input onclick="moneyConvert()" style="width: 150px" type="button" value="Convert"></td>-->
+  </tr>
+</table>
+<h1 id="kq"></h1>
+</body>
+<script>
+  function moneyConvert() {
+    let amount = document.getElementById('inputAmount').value;
+    let from = document.getElementById('inputFrom').value;
+    let to = document.getElementById('inputTo').value;
+    let vndUSD = amount / 24500;
+    let vndYEN = amount / 169;
+    let usdVND = amount * 24500;
+    let usdYEN = amount * 146;
+    let yenVND = amount * 169;
+    let yenUSD = amount / 146;
+    let result;
+    if (from == 'VND' && to == 'USD') {
+      result = vndUSD + ' USD'
+    } else if (from == 'VND' && to == 'YEN') {
+      result = vndYEN + ' YEN'
+    } else if (from == 'USD' && to == 'VND') {
+      result = usdVND + ' VND'
+    } else if (from == 'USD' && to == 'YEN') {
+      result = usdYEN + ' YEN'
+    } else if (from == 'YEN' && to == 'USD') {
+      result = yenUSD + ' USD'
+    } else {
+      result = yenVND + ' VND'
+    }
+   document.getElementById('kq').innerHTML ='Result: ' + result
+  }
+</script>
+</html>

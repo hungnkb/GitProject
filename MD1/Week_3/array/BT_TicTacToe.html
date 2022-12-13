@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="boardDisplay"></p>
+    <button onclick="changeValue()">Change Value</button>
+</body>
+<script>
+   let board = [];
+    let data = "";
+    let b = document.getElementById("boardDisplay");
+    let turn = 1;
+    for (let i = 0; i < 5; i++) {
+      board[i] = new Array('(.)', '(.)', '(.)', '(.)', '(.)');
+    }
+
+    for (let i = 0; i < 5; i++) {
+      data += "<br>";
+      for (let j = 0; j < 5; j++) {
+        data += board[i][j];
+      }
+    }
+    b.innerHTML = data;
+
+    function changeValue() {
+        data = "";
+    let x = +prompt("Chọn vị trí x");
+    let y = +prompt("Chọn vị trí y");
+   
+
+    
+    if(turn % 2 ===0) {
+    board[x][y] = "O";
+    }
+    else {
+    board[x][y] = "X";
+    }
+    turn++;
+
+    for (let i = 0; i < 5; i++) {
+      data += "<br>";
+      for (let j = 0; j < 5; j++) {
+        data += board[i][j];
+      }
+    }
+    b.innerHTML = data;
+    }
+
+    for(i=0; i<5; i++) {
+        for(j=0; j<5; j++) {
+        if(board[i][j] === 'X' && board[i][j+1] === 'X' && board[i][j+2] === 'X' && board[i][j+3] === 'X' && board[i][j+4] === "X" ||
+        board[i][j] === "X" && board[i+1][j+1] === "X"  && board[i+2][j+2] === "X" && board[i+3][j+3] === "X" && board[i+4][j+4] === "X" ) {
+            alert("X thắng ");
+        }
+        else if(board[i][j] === 'Y' && board[i+1][j] === 'Y' && board[i+2][j] === 'Y' && board[i+3][j] === 'Y' && board[i+4][j] === "X" ||
+        board[i][j] === "Y" && board[i+1][j+1] === "Y"  && board[i+2][j+2] === "Y" && board[i+3][j+3] === "Y" && board[i+4][j+4] === "Y" ) {
+            alert("Y Thắng")
+        }
+    }
+}
+    
+</script>
+</html>

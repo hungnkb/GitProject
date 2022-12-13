@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas"></canvas>
+</body>
+<script>
+class Rectangle {
+    constructor(height, width) {
+        this.height = height;
+        this.width = width;
+    }
+    setWidth(width) {
+        this.width = width;
+    }
+    setHeight(height) {
+        this.height = height;
+    }
+    dienTich_chuVi() {
+        return "Diện tích = " + this.width*this.height + "; Chu vi = " + (this.width+this.height)*2;
+    }
+    getHeight() {
+        return this.height;
+    }
+    getWidth() {
+        return this.width;
+    }
+}
+let a = new Rectangle(100,200);
+console.log(a.dienTich_chuVi())
+
+let c = document.getElementById("myCanvas");
+let ctx = c.getContext("2d");
+ctx.fillRect(100, 100, a.getWidth(), a.getHeight());
+
+</script>
+</html>

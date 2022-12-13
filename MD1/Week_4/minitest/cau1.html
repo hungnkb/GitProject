@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+ <button onclick="timMax()">Tìm Max</button>
+  
+     
+  </body>
+  <script>
+    // Câu 1
+    let a = +prompt("Nhập số phần tử: ");
+    let daySo =[];
+    for(i=0; i<a; i++) {
+        let a = prompt("Nhập phần tử: ");
+        daySo.push(a);
+    }
+
+    //Câu 1a
+    document.write(daySo);
+
+    //Câu 1b
+    let c = [];
+    let d = [];
+    for(i=0; i< daySo.length; i++) {
+        for(j=2; j<daySo.length-1; j++) {
+            if(daySo[i] !== j) {
+                if (daySo[i] % j !== 0) {
+                    c.push(daySo[i]);
+                    break;
+                }
+                else {
+                   d.push(daySo[i]);
+                   break;
+                }
+            }
+        }
+    }
+    // console.log(c)
+    alert(c + " là số nguyên tố; " + d + " không là số nguyên tố");
+
+    // Câu 1c
+    let trungBinhCongSNT = 0;
+    let tong = 0;
+    for(i=0; i<c.length; i++) {
+        tong += c[i];
+    }
+    trungBinhCongSNT = tong/c.length;
+    alert(trungBinhCongSNT);
+
+    // Câu 1d
+    function timMax() {
+        let max = daySo[0];
+        for(i=1; i< daySo.length-1; i++) {
+            if(max < daySo[i]) {
+                max = daySo[i]
+            }
+        }
+        alert("Số lớn nhất là: " + max);
+    }
+
+    // Câu 1e
+    function timSecond() {
+        timMax();
+        let second = daySo[0]
+        for(i=1; i<daySo.length-1; i++) {
+            if(second < max && second < daySo[i]) {
+               second = daySo[i];
+            }
+        }
+        alert("Số lớn thứ 2 là: " + second)
+    }
+  </script>
+</html>

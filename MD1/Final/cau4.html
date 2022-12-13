@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<canvas id="myCanvas"></canvas>
+<script>
+    class Rectangle {
+        constructor(x, y, width, height, color) {
+            this.x = x;
+            this.y = y;
+            this.width = width;
+            this.height = height;
+            this.color = color;
+        }
+        Draw() {
+            let c = document.getElementById("myCanvas");
+            let ctx = c.getContext("2d");
+            ctx.fillRect(this.x, this.y, this.width, this.height, this.color)
+        }
+    }
+
+
+
+    let hcn = new Rectangle(10, 10, 200, 100, "#000000")
+    hcn.Draw()
+
+   
+
+
+</script>
+
+</html>

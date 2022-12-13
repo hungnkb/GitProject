@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <button onclick="alertMessage()">Bài 1</button>
+    <button onclick="bai2()">Bài 2</button>
+    <button onclick="bai3()">Bài 3</button>
+    <button onclick="addNumbers()">Bài 4</button>
+    <br />
+    <p id="bai2"></p>
+    <input id="star" type="text" placeholder="Nhập tên ngôi sao" />
+    <button onclick="findStar()">Bài 5</button>
+    <p id="result"></p>
+  </body>
+  <script>
+    // Bài 1
+    function alertMessage() {
+      alert("Xin chào");
+    }
+
+    // Bài 2
+    function bai2() {
+      let a = +prompt("Nhập một số: ");
+      a++;
+      document.getElementById("bai2").innerHTML = a;
+    // return a+1;
+    }
+    
+    // console.log(bai2(6))
+    
+
+    // Bài 3
+    function bai3() {
+      let a = +prompt("Nhập số thứ nhất ");
+      let b = +prompt("Nhập số thứ hai ");
+      if (a > b) {
+        alert("a > b");
+      } else {
+        alert("Tổng 2 số là: " + (a + b));
+      }
+    }
+
+    // Bài 4
+    function addNumbers() {
+      firstNum = 4;
+      secondNum = 8;
+      result = firstNum + secondNum;
+      // return result;
+      alert(result);
+    }
+    result = 0;
+    result = addNumbers();
+
+    // Bài 5
+
+    function findStar() {
+      let arr1 = [
+        "Polaris",
+        "Aldebaran",
+        "Deneb",
+        "Vega",
+        "Altair",
+        "Dubhe",
+        "Regulus",
+      ];
+      let arr2 = [
+        "Ursa Minor",
+        "Tarurus",
+        "Cygnus",
+        "Lyra",
+        "Aquila",
+        "Ursa Major",
+        "Leo",
+      ];
+     
+      let star = document.getElementById("star").value;
+      let c = "";
+      console.log(star)
+      for (i = 0; i < arr1.length; i++) {
+        if (star === arr1[i]) {
+            console.log(arr1[i])
+            
+          document.getElementById("result").innerHTML =
+            star + " thuộc chòm sao " + arr2[i];
+            break;
+          
+        } else {
+          document.getElementById("result").innerHTML =
+            star + " không thuộc chòm sao nào";
+        
+        }
+      }
+    }
+      
+  </script>
+</html>

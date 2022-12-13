@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    div {
+      text-align: center;
+      margin: 0 auto;
+    }
+  </style>
+  <body>
+    <div>
+      <h1>Do you love me?</h1>
+      <button onclick="yes()">Yes</button>
+      <button id="buttonNo" onmouseover="no()"style="position: absolute">
+        No
+      </button>
+    </div>
+  </body>
+  <script>
+    function yes() {
+      alert("<3");
+    }
+    function no() {
+      let h = window.innerHeight;
+      let w = window.innerWidth;
+      let a = Math.random() * h;
+      let b = Math.random() * w;
+
+      document.getElementById("buttonNo").style.left = a + "px";
+      document.getElementById("buttonNo").style.top = b + "px";
+    }
+  </script>
+</html>

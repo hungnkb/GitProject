@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="Play()">Chơi</button>
+    <button onclick="rePlay()">Chơi lại</button>
+  </body>
+  <script>
+        // //Bài 1
+        // let a = 0;
+        // for(i = 1; i <= 100; i++) {
+        //     count = a++;
+        //     console.log(a);
+        //     if(count == 99) {
+        //     alert("Hoàn thành")
+        // }
+        // }
+
+
+        // //Bài 2
+        // for (let a = prompt("Nhập nhiệt độ"); a > 100; a++) {
+        //   a = prompt("Nhập lại nhiệt độ");
+        // }
+
+
+        // //Bài 3
+        // let a = 0;
+        // let b = 0;
+        // let c = 0;
+        // let d = "";
+        //     for (let i = 0; i < 20; i++){
+        //         if(i == 0) {
+        //             a = 1
+        //             c = 1
+        //             d += a + " "
+        //         }
+        //         else {
+        //             a = b + c
+        //             b = c
+        //             c = a
+        //             d += a + " "
+        //         }
+        //     }
+        //     document.write(d)
+
+
+        // //Bài 4
+        // let a = 0;
+        // let b = 0;
+        // let c = 0;
+        // let d = "";
+        //     for (let i = 0; i < 20; i++){
+        //         if(i == 0) {
+        //             a = 1
+        //             c = 1
+        //             d += a + " "
+        //         }
+        //         else {
+        //             a = b + c
+        //             b = c
+        //             c = a
+        //             d += a + " "
+        //         }
+        //         if(a%5==0){
+        //             break
+        //         }
+        //     }
+        //     document.write(a)
+
+
+        // //Bài 5
+        // let a = 0;
+        // let b = 0;
+        // let c = 0;
+        // let d = "";
+        // let e = 0;
+        //     for (let i = 0; i < 20; i++){
+        //         if(i == 0) {
+        //             a = 1
+        //             c = 1
+        //             d += a + " "
+        //             e += a
+        //         }
+        //         else {
+        //             a = b + c
+        //             b = c
+        //             c = a
+        //             d += a + " "
+        //             e += a
+        //         }
+        //     }
+
+        //     document.write(e)
+
+
+        // //Bài 6
+    //     let i;
+    //     let total = 0;
+    //     let count = 0;
+    //     for (i = 1; ; i++) {
+            
+    //         for( ;count <=30; count++) {
+                
+    //             total+=i
+    //         }
+    // }
+   
+    //     document.write(total)
+
+
+        // //Bài 7
+        // let i;
+        // for (i = 1; i < 100; i++){
+        //     if(i % 3 == 0 && i % 5 == 0) {
+        //         document.write("FizzBuzz ")
+        //     }
+        //     else if(i % 5 == 0) {
+        //         document.write("Buzz ")
+        //     }
+        //     else if(i % 3 == 0) {
+        //         document.write("Fizz ")
+        //     }
+        //     else {
+        //         document.write(i + " ")
+        //     }
+        // }
+        // document.write(i)
+
+
+        //Bài 8
+        function Play() {
+        let phamvi = Number(prompt("Trò chơi đoán số từ 0 - "))
+        let nhapso = Number(prompt("Nhập vào số muốn đoán"))
+        let soRamdom
+        if(phamvi){
+            soRamdom = Math.floor(Math.random()*phamvi)
+            if(soRamdom == nhapso){
+                alert("Bạn đã đoán đung")
+            }else{
+                while (soRamdom != nhapso){
+                    alert("Bạn đoán sai số đúng là "+soRamdom)
+                    nhapso = Number(prompt("Nhập vào số muốn đoán"))
+                }
+                alert("Bạn đoán đúng")
+            }
+        }
+      }
+  </script>
+</html>

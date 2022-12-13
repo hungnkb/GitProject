@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    function checkArray(str1, str2) {
+        if(str1.length > str2.length) {
+        for(let i = 0; i < str1.length; i++) {
+            for(let j = 0; j < str2.length; j++){
+                str1New = str1.slice(i,str2.length)
+              
+                if(str1New = str2) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+        }
+    }
+    else if(str1.length == str2.length) {
+        if(str1 == str2) {
+            return true
+        }
+        else {
+            return false
+        }
+    }
+    else if(str1.length < str2.length) {
+        for(let i = 0; i < str2.length; i++) {
+            for(let j = 0; j < str1.length; j++) {
+                str2New = str2.slice(i,str1.length)
+                
+                if(str2New == str1) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+        }
+}
+    }
+    alert(checkArray('33141', '3141'))
+
+</script>
+</html>

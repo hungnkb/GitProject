@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="feet" type="text" placeholder="Nhập feet">
+    <button onclick="metersConvert()">Đổi meters</button><br>
+    <h2 id = resultMeters></h2><br>
+
+    <input id="meters" type="text" placeholder="Nhập meters">
+    <button onclick="feetConvert()">Đổi feet</button><br>
+    <h2 id="resultFeet"></h2>
+</body>
+<script>
+    function metersConvert() {
+        let a = +document.getElementById("feet").value
+        document.getElementById("resultMeters").innerHTML = a*0.305 + " " + "meters";
+    }
+
+    function feetConvert() {
+        let a = +document.getElementById("feet").value
+        document.getElementById("resultFeet").innerHTML = a*3.279 + " " + "feet";
+    }
+</script>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+  input{
+    text-align: right;
+    width: 320px;
+
+  }
+  button{
+    text-align: center;
+    width: 80px;
+    height: 40px;
+    padding: 0px;
+    border-width: 0px;
+  }
+  td{
+    padding: 0px;
+  }
+</style>
+<body>
+<table>
+  <tr><input id="screen" type="text" value="0"></tr>
+  <tr>
+    <td><button style="background-color: lightgray">(</button></td>
+    <td><button style="background-color: lightgray">)</button></td>
+    <td><button style="background-color: lightgray">%</button></td>
+    <td><button type="reset" style="background-color: lightgray">AC</button></td>
+  </tr>
+  <tr>
+    <td><button id="seven">7</button></td>
+    <td><button id="eight">8</button></td>
+    <td><button id="nine">9</button></td>
+    <td><button style="background-color: lightgray">÷</button></td>
+  </tr>
+  <tr>
+    <td><button id="four">4</button></td>
+    <td><button id="five">5</button></td>
+    <td><button id="six">6</button></td>
+    <td><button style="background-color: lightgray">X</button></td>
+  </tr>
+  <tr>
+    <td><button id="one" onclick="caculator()">1</button></td>
+    <td><button id="two">2</button></td>
+    <td><button id="three">3</button></td>
+    <td><button style="background-color: lightgray">-</button></td>
+  </tr>
+  <tr>
+    <td><button id="zero" value="0" onclick="caculator">0</button></td>
+    <td><button>.</button></td>
+    <td><button style="background-color: dodgerblue">=</button></td>
+    <td><button style="background-color: lightgray">+</button></td>
+  </tr>
+</table>
+<script>
+function caculator(){
+  let n0 = document.getElementById('zero').value;
+  let n1 = document.getElementById('one').value;
+  document.getElementById('screen').innerHTML = n0;
+  document.getElementById('screen').innerHTML = n1;
+}
+</script>
+</body>
+</html>

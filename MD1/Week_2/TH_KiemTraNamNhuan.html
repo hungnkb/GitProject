@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra năm nhuận</title>
+</head>
+<body>
+<input id="year" type="text" placeholder="Nhập năm">
+<button onclick="kiemtra()">Kiểm tra</button>
+<h3 id="result"></h3>
+</body>
+<script>
+  function kiemtra() {
+    let year = +document.getElementById('year').value;
+    if (year % 4 == 0 && year % 100 !== 0) {
+      document.getElementById('result').innerHTML = year + " là năm nhuận"
+    } else if (year % 100 == 0 && year % 400 == 0) {
+      document.getElementById('result').innerHTML = year + " là năm nhuận"
+    } else {
+      document.getElementById('result').innerHTML = year + " không là năm nhuận"
+    }
+  }
+</script>
+</html>
